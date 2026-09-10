@@ -3,9 +3,7 @@ import ReactDOM from "react-dom/client";
 import profilePhoto from "./assets/profile.png";
 import "./styles.css";
 
-/* =========================================================================
-   CONTENT — edit this section to update anything on the site
-   ========================================================================= */
+
 const profile = {
   name: "Anvesha Singh",
   initials: "AS",
@@ -102,9 +100,8 @@ const navItems = [
   { id: "contact", label: "Contact" },
 ];
 
-/* =========================================================================
-   ICONS — inline SVGs (no external icon library needed)
-   ========================================================================= */
+//icons  
+
 const IconHome = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M3 11l9-8 9 8" strokeLinecap="round" strokeLinejoin="round" />
@@ -173,9 +170,7 @@ const iconMap = {
   experience: IconBriefcase, achievements: IconTrophy, contact: IconMail,
 };
 
-/* =========================================================================
-   SMALL REUSABLE HELPERS
-   ========================================================================= */
+//helpers 
 function Reveal({ children }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -275,9 +270,8 @@ function Starfield() {
   return <canvas ref={canvasRef} className="starfield-canvas" />;
 }
 
-/* =========================================================================
-   SECTIONS
-   ========================================================================= */
+//sections 
+
 function Sidebar({ activeSection, onNavigate, open, onClose }) {
   return (
     <>
@@ -475,9 +469,8 @@ function Contact() {
   );
 }
 
-/* =========================================================================
-   APP
-   ========================================================================= */
+//app 
+
 function App() {
   const [active, setActive] = useState("home");
   const [mobileOpen, setMobileOpen] = useState(false);
